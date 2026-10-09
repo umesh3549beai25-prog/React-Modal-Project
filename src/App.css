@@ -1,0 +1,113 @@
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f1f5f9;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.app h1 {
+  color: #1e293b;
+}
+
+.app p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+.open-btn,
+.ok-btn {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.open-btn:hover,
+.ok-btn:hover {
+  background: #3730a3;
+}
+
+/* Background overlay */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.65);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Modal box */
+
+.modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+
+  animation: modalOpen 0.25s ease;
+}
+
+.modal-box h2 {
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.modal-box p {
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Close button */
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  background: transparent;
+  border: none;
+
+  font-size: 30px;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #dc2626;
+}
+
+/* Animation */
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
